@@ -103,7 +103,7 @@ namespace RokuDotNet.Client
 
         Task IRokuDeviceAction.Launch(string appId, System.Collections.Specialized.NameValueCollection nvc)
         {
-            return this.GetAsync<string>($"launch/{appId}?{nvc}");
+            return this.PostAsync($"launch/{appId}?{nvc}");
         }
 
         #endregion
